@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: beige;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.App {
+  width: 75vw;
+  height: 100vh;
+  background-color: darkseagreen;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.Header {
+  background-color: mintcream;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.Nav {
+  background-color: bisque;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.Nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  margin-left: 10px;
+}
+
+.Nav li {
+  margin: 10px;
+}
+
+.Nav li a {
+  color: black;
+  text-decoration: none;
+}
+
+.Nav li a:hover {
+  color: darkgray;
+}
+
+.NotFound {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.Login, .Register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Login .background, .Register .background {
+  margin-top: 3rem;
+  min-height: 40vh;
+  min-width: 40vw;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: blanchedalmond;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Login form, .Register form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Login label, .Register label {
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Login input, .Register input {
+  background-color: darkseagreen;
+  color: whitesmoke;
+}
+
+.Login button, .Register button {
+  margin-top: 1rem;
+  background-color: rgba(121, 236, 121, 0.477);
+  border: none;
+  font-size: 1.3rem;
+  color: rgb(62, 151, 228);
+}
+
+.Login a, .Register a {
+  margin-top: 5rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.MyCourses, .CoursePage, .AddCourse {
+  margin-top: 2rem;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.MyCourses ul, .CoursePage ul, .AddCourse {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.MyCourses li, .CoursePage li {
+  margin-top: 30px;
+  border-bottom: 2px solid white;
+}
+
+.MyCourses a {
+  text-decoration: none;
+  color: white;
+}
+
+.CoursePage li {
+  color: white;
+}
+
+.AddCourse li {
+  margin-top: 50px;
+  background-color: antiquewhite;
+  min-width: 30vw;
+}
+
+.AddCourse .addCourseButton {
+  font-size: 1.2rem;
+  background-color: white;
+  margin-top: 5px;
+  color: black;
+}
+
+.AddCourse .addCourseButton:hover {
+  cursor: pointer;
+}
+
+.AddCourse .addCourseButton:hover {
+  color: red;
+}
+
+
