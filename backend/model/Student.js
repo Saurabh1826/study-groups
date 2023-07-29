@@ -7,7 +7,8 @@ const studentSchema = new Schema({
     username: String,
     password: String,
     refreshToken: { type: String, default: '' },
-    courses: { type: [String], default: [] }
+    courses: { type: [String], default: [] },
+    imgKey: { type: String, default: '' }
 })
 
 module.exports = mongoose.model('Student', studentSchema)

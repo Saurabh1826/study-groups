@@ -5,6 +5,7 @@ const verifyJWT = require('./middleware/verifyJWT');
 const cookieParser = require('cookie-parser')
 const corsOptions = require('./config/corsOptions')
 const credentials = require('./middleware/credentials')
+const bodyParser = require('body-parser');
 const connectDB = require('./config/dbConfig')
 require('dotenv').config()
 
@@ -15,13 +16,15 @@ connectDB()
 
 // Middleware
 // app.use(credentials)
+app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }))
 app.use(cors(corsOptions))
-app.use(cookieParser())
-app.use(express.json())
+app.use(cookieParser({ limit: '50mb' }))
+app.use(express.json({ limit: '50mb' }))
 
 // Routes
 app.use('/register', require('./routes/register'))
 app.use('/login', require('./routes/login'))
+app.use('/profilePic', require('./routes/profilePic'))
 app.use(verifyJWT)
 app.use('/addCourse', require('./routes/addCourse'))
 app.use('/coursePage', require('./routes/coursePage'))

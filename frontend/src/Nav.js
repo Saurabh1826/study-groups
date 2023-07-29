@@ -12,6 +12,7 @@ const Nav = () => {
       <ul>
           <li><Link to='/myCourses/'>My Courses</Link></li>
         <li><Link to='/addCourse/'>Add a Course</Link></li>
+        <li><Link to='/addProfilePic/'>Add Profile Picture</Link></li>
         <li onClick={handleLogout}><Link to=''>Logout</Link></li>
       </ul>
     </nav>

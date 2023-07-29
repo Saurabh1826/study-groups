@@ -4,6 +4,12 @@ import { change } from "../features/accessToken/accessTokenSlice";
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux'
 import { selectAccessToken } from '../features/accessToken/accessTokenSlice'
+import AWS from 'aws-sdk'
+
+// AWS.config.update({
+//     accessKeyId: process.env.AWS_ACCESS_KEY,
+//     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+// })
 
 const DataContext = createContext({})
 
@@ -39,6 +45,7 @@ export const DataProvider = ({ children }) => {
     const [allCourses, setAllCourses] = useState([])
     // State for the course name to display in the CoursePage component
     const [courseName, setCourseName] = useState('')
+    const [imageURL, setImageURL] = useState('')
 
     const handleLoginSubmit = async (e) => {
         e.preventDefault()
@@ -62,6 +69,11 @@ export const DataProvider = ({ children }) => {
             dispatch(change(body.accessToken))
             // Set accessToken cookie 
             document.cookie = `accessToken=${body.accessToken}`
+            // Set imageURL
+            setImageURL(body.imgUrl)
+            console.log('url', body.imgUrl)
+            console.log(body)
+
             // Redirect to 'My Courses' page
             navigate('/myCourses')
         } catch(err) {
@@ -140,7 +152,7 @@ export const DataProvider = ({ children }) => {
             setNewUsername, newPassword, setNewPassword, myCourse, setMyCourse,
             addCourse, setAddCourse, courseStudents, setCourseStudents, myCourses, setMyCourses, handleLoginSubmit, handleRegisterSubmit, allCourses,
             setAllCourses, handleAddCourse, courseName, setCourseName, firstName,
-            setFirstName, lastName, setLastName, handleLogout
+            setFirstName, lastName, setLastName, handleLogout, imageURL
         }}>
             {children}
         </DataContext.Provider>

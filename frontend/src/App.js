@@ -8,6 +8,7 @@ import MyCourses from './MyCourses'
 import CoursePage from './CoursePage'
 import AddCourse from './AddCourse'
 import NotFound from './NotFound'
+import ProfilePic from './ProfilePic'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/myCourses/' element={<MyCourses />} />
           <Route path='/coursePage/:courseId' element={<CoursePage />} />
           <Route path='/addCourse/' element={<AddCourse />} />
+          <Route path='/addProfilePic/' element={<ProfilePic />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </DataProvider>
